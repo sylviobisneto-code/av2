@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: av2-postgres
+    environment:
+      POSTGRES_DB: av2
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    container_name: av2-app
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
