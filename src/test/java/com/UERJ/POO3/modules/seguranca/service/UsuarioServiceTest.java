@@ -44,9 +44,9 @@ class UsuarioServiceTest {
     @BeforeEach
     void setUp() {
         usuarioTeste = new Usuario();
-        usuarioTeste.setUsername("felipe_admin");
+        usuarioTeste.setUsername("sylvio_admin");
         usuarioTeste.setPassword("senha123");
-        usuarioTeste.setEmail("felipe@petshop.com");
+        usuarioTeste.setEmail("sylvio@petshop.com");
 
         papelTeste = new Papel("ROLE_ADMIN");
     }
